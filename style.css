@@ -85,4 +85,5 @@ body {
     color: white;
     border: none;
     border-radius: 3rem;
+    cursor: pointer;
 }
