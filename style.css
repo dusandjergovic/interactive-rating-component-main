@@ -105,3 +105,7 @@ body {
 #ratedVote h1 {
     color: white;
 }
+
+.clickedRate {
+    background-color: hsl(217, 12%, 63%) !important;
+}
