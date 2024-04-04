@@ -12,7 +12,6 @@ body {
 }
 
 #container {
-    /* border: 1px solid red; */
     border-radius: 1.5rem;
     padding: 1rem;
     background-color: hsl(213, 19%, 18%);
@@ -20,7 +19,13 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     gap: 1rem;
-    width: 20%;
+    min-width: 20%;
+}
+
+@media screen and (min-width: 1200px) {
+    #container {
+        width: 20%;
+    }
 }
 
 .star{
@@ -40,13 +45,11 @@ body {
 }
 
 .heading {
-    /* border: 1px solid red; */
     width: 100%;
     color: hsl(0, 0%, 100%);
 }
 
 .text {
-    /* border: 1px solid red; */
     width: 100%;
     color: hsl(217, 12%, 63%);
 }
@@ -54,6 +57,7 @@ body {
 .list ul{
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -70,13 +74,8 @@ body {
     cursor: pointer;
 }
 
-/* .list ul li:active {
-    background-color: hsl(217, 12%, 63%);
-} */
-
 #thankYou {
     display: none;
-    margin-left: 25%;
 }
 
 #btn {
@@ -86,4 +85,23 @@ body {
     border: none;
     border-radius: 3rem;
     cursor: pointer;
+}
+
+.rate {
+    padding: 1rem;
+    color: hsl(25, 97%, 53%);
+    border-radius: 2.5rem;
+    background-color: hsl(215, 37%, 15%);
+}
+
+#ratedVote {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    text-align: center;
+    display: none;
+}
+
+#ratedVote h1 {
+    color: white;
 }
