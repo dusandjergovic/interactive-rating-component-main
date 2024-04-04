@@ -1,11 +1,15 @@
 $(document).ready(function() {
 
     let userSelection = [];
+    let selectedRate = null;
 
     $("li").click(function() {
-        $(this).css({
-            'background-color': 'hsl(217, 12%, 63%)'
-        })
+        
+        if(selectedRate !== null) {
+            selectedRate.removeClass('clickedRate');
+        }
+        $(this).addClass('clickedRate');
+        selectedRate = $(this);
 
        userSelection.push($(this).attr('data-number'))
 
@@ -15,7 +19,7 @@ $(document).ready(function() {
             $("#thankYou").show();
             $("#ratedVote").show();
             let rate = $(".rate")
-            rate.text(`You selected ${userSelection.slice(0, 1)} out of 5`);
+            rate.text(`You selected ${userSelection.slice(-1)} out of 5`);
             $("#container").css({
                 'display': 'grid',
                 'place-items': 'center',
