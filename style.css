@@ -109,3 +109,19 @@ body {
 .clickedRate {
     background-color: hsl(217, 12%, 63%) !important;
 }
+
+.attribution {
+    display: flex;
+    flex-direction: column;
+    /* gap: .5rem; */
+}
+
+#socials {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+#socials img {
+    width: 30px;
+}
